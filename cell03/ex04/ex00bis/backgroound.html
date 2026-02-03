@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer - jQuery</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <div class="container">
+        <button id="colorButton">Change Background Color</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function getRandomColor() {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+
+            $('#colorButton').click(function() {
+                const randomColor = getRandomColor();
+                $('body').css('background-color', randomColor);
+            });
+        });
+    </script>
+</body>
+</html>

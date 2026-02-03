@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - jQuery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .calculator {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .calc-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Basic Calculator</h1>
+        <form class="calc-form" id="calcForm">
+            <div class="calc-row">
+                <input type="text" id="leftOperand" placeholder="0">
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <input type="text" id="rightOperand" placeholder="0">
+            </div>
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#calcForm').submit(function(e) {
+                e.preventDefault();
+
+                const left = $('#leftOperand').val();
+                const right = $('#rightOperand').val();
+                const operator = $('#operator').val();
+
+                const leftNum = parseInt(left);
+                const rightNum = parseInt(right);
+
+                if (left === '' || right === '' || isNaN(leftNum) || isNaN(rightNum) || 
+                    leftNum < 0 || rightNum < 0 || 
+                    !Number.isInteger(parseFloat(left)) || !Number.isInteger(parseFloat(right))) {
+                    alert('Error :(');
+                    console.log('Error :(');
+                    return;
+                }
+
+                if ((operator === '/' || operator === '%') && rightNum === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+
+                let result;
+                switch(operator) {
+                    case '+':
+                        result = leftNum + rightNum;
+                        break;
+                    case '-':
+                        result = leftNum - rightNum;
+                        break;
+                    case '*':
+                        result = leftNum * rightNum;
+                        break;
+                    case '/':
+                        result = leftNum / rightNum;
+                        break;
+                    case '%':
+                        result = leftNum % rightNum;
+                        break;
+                }
+
+                alert(result);
+                console.log(result);
+            });
+
+            setInterval(function() {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink; /* Pink ? what’s wrong with pink ? */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .images img {
+            width: 300px; 
+            height: auto;
+        }
+        .images a {
+            text-decoration: none;
+            color: blue;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid black;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Basics! &#9733;</h1> <!-- Title with a special character -->
+
+    <div class="images">
+        <div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="Shop 1">
+            <a href="https://shop1.example.com" target="_blank">Visit Shop 1</a>
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="Shop 2">
+            <a href="https://shop2.example.com" target="_blank">Visit Shop 2</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        © kputthaw 2026
+    </div>
+</body>
+</html>

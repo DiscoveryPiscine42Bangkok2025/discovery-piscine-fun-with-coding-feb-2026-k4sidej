@@ -1,0 +1,72 @@
+
+.sandwich-menu {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sandwich-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bread-top {
+  background-color: #f3cf7a;
+  color: #5d4037;
+  padding: 15px 30px;
+  font-weight: bold;
+  border: 2px solid #d4a373;
+  border-radius: 15px 15px 5px 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.sandwich-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.sandwich-menu:hover .sandwich-ingredients {
+  display: block;
+}
+
+
+.ham {
+  background-color: #ffafcc;
+  color: #8c3b4a;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ff8fab;
+}
+
+
+.cheese {
+  background-color: #fee440;
+  color: #7a6a00;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #f9dc5c;
+}
+
+.bread-bottom {
+  background-color: #f3cf7a;
+  color: #5d4037;
+  padding: 12px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  font-size: 0.8em;
+  border-top: 2px solid #d4a373;
+}
+

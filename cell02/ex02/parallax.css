@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.parallax-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.parallax-section .message {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.img1 {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg');
+}
+
+.img2 {
+    background-image: url('https://st.depositphotos.com/1763233/3456/i/450/depositphotos_34562497-stock-photo-tea-tree-leaves.jpg');
+}
+
+.content-block {
+    background-color: #000;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.content-block .message {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.content-block h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.content-block p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.parallax-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-section p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
