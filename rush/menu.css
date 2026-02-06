@@ -1,0 +1,58 @@
+/* Full-screen background setup */
+.landing-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 123, 255, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-box {
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.responsive-title {
+    font-size: calc(1.8rem + 3.3vw);
+    line-height: 1.2;
+}
+
+.btn-custom {
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin: 10px;
+    border: 2px solid white;
+    min-width: 220px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 576px) {
+    .btn-custom {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
